@@ -75,7 +75,7 @@ The latest data does not support a simple claim that lower housing completions a
 
 ## Power BI Dashboard
 
-![Ireland Housing Market Intelligence Dashboard](images/ireland_housing_dashboard.png.png)
+![Ireland Housing Market Intelligence Dashboard](images/ireland_housing_dashboard.png)
 
 The final dashboard includes:
 
@@ -88,7 +88,19 @@ The final dashboard includes:
 - Top 10 local authorities by latest-quarter completions
 - Latest national completions by house type
 
+**Power BI file:** [`dashboard/Ireland_Housing_Market_Intelligence.pbix`](dashboard/Ireland_Housing_Market_Intelligence.pbix)
+
 The dashboard was validated against the Python outputs before finalisation.
+
+## Data Availability
+
+The larger raw CSO downloads remain outside GitHub, while the compact final Power BI-ready analytical exports are included in `data/power_bi/`:
+
+- `market_intelligence_quarterly.csv`
+- `local_authority_completions.csv`
+- `national_house_type_completions.csv`
+
+This keeps the source workflow reproducible while giving reviewers direct access to the final analytical layer.
 
 ## Repository Structure
 
@@ -98,7 +110,11 @@ ireland-housing-market-intelligence/
 ├── .gitignore
 ├── requirements.txt
 ├── data/
-│   └── README.md
+│   ├── README.md
+│   └── power_bi/
+│       ├── market_intelligence_quarterly.csv
+│       ├── local_authority_completions.csv
+│       └── national_house_type_completions.csv
 ├── src/
 │   ├── 01_profile_datasets.py
 │   ├── 02_clean_datasets.py
@@ -113,10 +129,11 @@ ireland-housing-market-intelligence/
 │   ├── validated_findings.md
 │   └── methodology_and_limitations.md
 ├── dashboard/
-│   └── README.md
+│   ├── README.md
+│   └── Ireland_Housing_Market_Intelligence.pbix
 └── images/
     ├── README.md
-    └── ireland_housing_dashboard.png.png
+    └── ireland_housing_dashboard.png
 ```
 
 ## Tools & Skills Demonstrated
