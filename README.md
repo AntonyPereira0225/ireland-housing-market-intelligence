@@ -75,6 +75,8 @@ The latest data does not support a simple claim that lower housing completions a
 
 ## Power BI Dashboard
 
+![Ireland Housing Market Intelligence Dashboard](images/ireland_housing_dashboard.png.png)
+
 The final dashboard includes:
 
 - Latest reporting quarter
@@ -113,7 +115,8 @@ ireland-housing-market-intelligence/
 ├── dashboard/
 │   └── README.md
 └── images/
-    └── README.md
+    ├── README.md
+    └── ireland_housing_dashboard.png.png
 ```
 
 ## Tools & Skills Demonstrated
