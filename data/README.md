@@ -1,41 +1,25 @@
 # Data
 
-This project uses official Central Statistics Office (CSO) PxStat datasets.
+The project uses official Central Statistics Office (CSO) PxStat data.
 
-## Source files
+## Raw source files
 
-Place downloaded CSV files locally in `data/raw/`.
+Place the downloaded CSV files in `data/raw/` using these filenames:
 
-Expected files:
+- `HPM09.csv` — Residential Property Price Index
+- `NDQ06.csv` — New Dwelling Completions
 
-- `HPM09.csv` — Residential Property Price Index, monthly
-- `NDQ06.csv` — New Dwelling Completions, quarterly
+Raw files are not committed to the repository. This keeps the repository lightweight and encourages reproducible retrieval from the official source.
 
-The raw CSV files are intentionally excluded from Git version control through `.gitignore`. This keeps the repository lightweight and makes the workflow reproducible from the official source data.
+## Generated folders
 
-## Current downloaded coverage
+The Python workflow creates:
 
-### HPM09
+- `data/processed/hpm09_clean.csv`
+- `data/processed/ndq06_clean.csv`
+- `data/processed/market_intelligence_quarterly.csv`
+- `data/power_bi/market_intelligence_quarterly.csv`
+- `data/power_bi/local_authority_completions.csv`
+- `data/power_bi/national_house_type_completions.csv`
 
-- January 2005 to June 2026
-- 20,640 rows
-- Columns:
-  - `Statistic Label`
-  - `Month`
-  - `Type of Residential Property`
-  - `UNIT`
-  - `VALUE`
-
-### NDQ06
-
-- 2011 Q1 to 2026 Q2
-- 7,936 rows
-- Columns:
-  - `STATISTIC Label`
-  - `Quarter`
-  - `Type of House`
-  - `Local Authority`
-  - `UNIT`
-  - `VALUE`
-
-Processed outputs created later in the project will be stored under `data/processed/` and will also be excluded from Git unless a small portfolio-ready extract is intentionally added.
+Run the scripts in numerical order from the repository root.
